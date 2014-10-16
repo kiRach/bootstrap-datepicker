@@ -1018,7 +1018,7 @@
 				this.dates.clear();
 			}
 			else if (ix !== -1){
-				this.dates.remove(ix);
+				this.o.selectionToggle && this.dates.remove(ix);
 			}
 			else {
 				this.dates.push(date);
@@ -1404,6 +1404,7 @@
 		multidateSeparator: ',',
 		orientation: "auto",
 		rtl: false,
+		selectionToggle: false,
 		startDate: -Infinity,
 		startView: 0,
 		todayBtn: false,

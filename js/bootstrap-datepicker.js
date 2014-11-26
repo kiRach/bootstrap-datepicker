@@ -408,6 +408,8 @@
 		},
 
 		show: function(){
+            if (!this.isEnabled())
+                return;
 			if (!this.isInline)
 				this.picker.appendTo('body');
 			this.picker.show();
@@ -415,6 +417,21 @@
 			this._attachSecondaryEvents();
 			this._trigger('show');
 		},
+
+        isEnabled: function () {
+            return !this.picker.hasClass('datepicker-disabled');
+        },
+
+        disable: function () {
+            if (this.isEnabled()) {
+                this.picker.addClass('datepicker-disabled');
+                this.hide();
+            }
+        },
+
+        enable: function () {
+            if (!this.isEnabled()) this.picker.removeClass('datepicker-disabled');
+        },
 
 		hide: function(){
 			if (this.isInline)

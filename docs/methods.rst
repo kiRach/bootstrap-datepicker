@@ -14,12 +14,36 @@ Arguments: None
 Remove the datepicker.  Removes attached events, internal attached objects, and added HTML elements.
 
 
+isEnabled
+---------
+
+Arguments: None
+
+Whether or not this datepicker is enabled.
+
+
+disable
+-------
+
+Arguments: None
+
+Disable the datepicker so that it won't be shown until enabled. Hides already shown datepicker.
+
+
+enable
+------
+
+Arguments: None
+
+Enable the disabled datepicker.
+
+
 show
 ----
 
 Arguments: None
 
-Show the picker.
+Show the picker, if not disabled.
 
 
 hide
